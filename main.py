@@ -45,6 +45,26 @@ def LF(master, text, size, bd, row, column):
     return LabelFrame
 
 
+# get
+def R():
+    print(
+        [
+            EFNFL.get(),
+            EFNF.get(),
+            EBCN.get(),
+            EI.get(),
+            ENC.get(),
+            EHA.get(),
+            ET1.get(),
+            ET2.get(),
+            EM.get(),
+            EW.get(),
+            EQ.get(),
+            EOC.get(),
+        ]
+    )
+
+
 # تابع ورودی
 def E(master, width, row, column):
     Entry = tk.Entry(master, font=("B Nazanin", 16), width=width)
@@ -115,26 +135,6 @@ def W(master, padx, pady):
     for Widget in master.winfo_children():
         Widget.grid_configure(padx=padx, pady=pady)
     return Widget
-
-
-# get
-def ST():
-    T1 = EFNFL.get()
-    T2 = EFNF.get()
-    T3 = EBCN.get()
-    T4 = EI.get()
-    T5 = ENC.get()
-    T6 = EHA.get()
-    T7 = ET.get()
-    T8 = ET.get()
-    T9 = EM.get()
-    T10 = EW.get()
-    T11 = EQ.get()
-    T12 = EOC.get()
-    List = (
-        [f"{T1}, {T2}, {T3}, {T4}, {T5}, {T6}, {T7}, {T8}, {T9}, {T10}, {T11}, {T12}"],
-    )
-    print(List, "Done")
 
 
 # ارزش تأهل پنجره
@@ -228,10 +228,10 @@ ENC = E(LFNC, 16, 0, 0)
 EHA = E(LFHA, 16, 0, 0)
 
 # ورودی تلفن اول
-ET = E(LFT1, 16, 0, 0)
+ET1 = E(LFT1, 16, 0, 0)
 
 # ورودی تلفن دوم
-ET = E(LFT2, 16, 0, 0)
+ET2 = E(LFT2, 16, 0, 0)
 
 # ورودی موبایل
 EM = E(LFM, 16, 0, 0)
@@ -640,7 +640,7 @@ B = tk.Button(
     fg="white",
     bg="#4CAF50",
     activebackground="green",
-    command=ST,
+    command=R,
 )
 B.grid(row=5, column=1)
 
