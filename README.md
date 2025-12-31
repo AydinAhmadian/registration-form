@@ -6,7 +6,8 @@ A desktop registration form built using Python and Tkinter.
 - Multi-section form layout
 - Persian (RTL) user interface
 - Modular widget creation
-- Radio buttons, checkboxes, and input validation basics
+- Radio buttons and checkboxes
+- Basic input validation
 
 ## Requirements
 - Python 3.x
